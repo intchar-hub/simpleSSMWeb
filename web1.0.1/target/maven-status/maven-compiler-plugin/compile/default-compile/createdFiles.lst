@@ -1,0 +1,5 @@
+com\QXY\mapper\UserMapper.class
+com\QXY\controller\UserController.class
+com\QXY\service\impl\UserServiceImpl.class
+com\QXY\pojo\User.class
+com\QXY\service\UserService.class
