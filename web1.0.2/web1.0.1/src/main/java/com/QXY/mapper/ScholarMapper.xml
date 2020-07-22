@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--
+author:寇笑宇
+create time:7/16
+update time:7/20
+-->
+<mapper namespace="com.QXY.mapper.ScholarMapper">
+    <!--得到所有学者-->
+    <select id="getAllScholars" resultType="com.QXY.pojo.Scholar">
+        select * from sholar ;
+    </select>
+
+</mapper>
