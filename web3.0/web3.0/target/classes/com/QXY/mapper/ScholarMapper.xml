@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--
+author:寇笑宇
+create time:7/16
+update time:7/24
+-->
+<mapper namespace="com.QXY.mapper.ScholarMapper">
+    <!--得到所有学者-->
+    <select id="getAllScholars" resultType="com.QXY.pojo.Scholar">
+        select * from scholar
+    </select>
+
+    <select id="getScholarsBySchool" resultType="com.QXY.pojo.Scholar" parameterType="String">
+        select * from scholar where school=#{school}
+    </select>
+
+    <select id="getScholarsByID" resultType="com.QXY.pojo.Scholar" parameterType="String">
+        select * from scholar where scholar_id= #{scholar_id}
+    </select>
+
+    <select id="getScholarsByMajor" resultType="com.QXY.pojo.Scholar" parameterType="String">
+        select * from scholar where major=#{major}
+    </select>
+
+    <select id="getScholarsByName" resultType="com.QXY.pojo.Scholar" parameterType="String">
+        select * from scholar
+        <where>
+            <if test="scholar_name!=null and scholar_name!= ''">
+                scholar_name like "%"#{scholar_name}"%"
+            </if>
+        </where>
+    </select>
+
+
+</mapper>
